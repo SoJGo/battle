@@ -1,2 +1,10 @@
 <%= @player1 %> vs. <%= @player2 %> 
 <p><%= @player2 %> HP: 100/100</p>
+
+<form action='/player-2-attacks' method='post'>
+<input type='submit' value='Attack!'>
+</form>
+
+<% if @attacker == 'player2' %>
+<p><%= @player1 %> launches attack on <%= @player2 %>!"</p>
+<% end %>
